@@ -8,3 +8,5 @@ pagination:
 
 {% capture total_posts %}{{ site.posts | size }}{% endcapture %}
 {% include PostList.html posts=site.posts page=0 per_page=site.paginate total_posts=total_posts %}
+
+<a href="/blog/page-2/">Mais</a>
