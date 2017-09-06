@@ -1,3 +1,5 @@
+baseurl: https://leandroc.github.io
+
 timezone:	America/Sao_Paulo
 
 highlighter: rouge
