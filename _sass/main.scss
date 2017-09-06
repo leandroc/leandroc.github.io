@@ -4,7 +4,11 @@ html {
   @include fluid-type(320px, 1200px, 16px, 24px);
 }
 
-body { background-color: $color; }
+:focus { outline-color: darken($color, 10); }
+
+body {
+  min-height: 100vh;
+}
 
 main {
   min-width: 100vw;
@@ -31,6 +35,11 @@ main {
   display: flex;
   align-items: center;
   align-content: stretch;
+
+  background-color: $color;
+  color: #fff;
+
+  a { color: inherit; }
 }
 
 
