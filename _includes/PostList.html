@@ -1,19 +1,21 @@
 {% assign posts = include.posts %}
 {% assign page = include.page %}
-{% assign per_page = include.per_page %}
 {% assign total_posts = include.total_posts %}
+{% assign per_page = include.per_page %}
 {% assign start = total_posts %}
 
-{% for i in (1..page) reversed %}
-  {% assign check = i | minus: 1 %}
+{% if page > 0 %}
+  {% for i in (1..page) reversed %}
+    {% assign check = i | minus: 1 %}
 
-  {% if check > 0 %}
-    {% assign start = start | minus: per_page %}
-  {% endif %}
-{% endfor %}
+    {% if check > 0 %}
+      {% assign start = start | minus: per_page %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <ol class="post__list" reversed start="{{ start }}">
-  {% for post in posts %}
+  {% for post in posts limit:per_page %}
   <li class="post__item">
     <article class="post">
       <header class="post__header">

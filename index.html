@@ -4,10 +4,7 @@ pagination:
   enabled: true
 ---
 
-{% if paginator.page < 2 %}
-  {% include Card.html %}
-{% endif %}
+{% include Card.html %}
 
-{% include PostList.html posts=paginator.posts page=paginator.page per_page=paginator.per_page total_posts=paginator.total_posts %}
-
-{% include Pagination.html pagination=paginator %}
+{% capture total_posts %}{{ site.posts | size }}{% endcapture %}
+{% include PostList.html posts=site.posts page=0 per_page=site.paginate total_posts=total_posts %}

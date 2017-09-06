@@ -1,4 +1,5 @@
-baseurl: https://leandroc.github.io
+# baseurl: https://leandroc.github.io
+baseurl: /
 
 timezone:	America/Sao_Paulo
 
@@ -9,20 +10,20 @@ sass:
   sass_dir: _sass
 
 excerpt_separator: <!-- more -->
-permalink: /:year/:month/:title.html
+permalink: /blog/:year/:month/:title.html
 
-# paginate: 5
-# paginate_path: "/blog/page-:num/"
+paginate: 5
+paginate_path: "/blog/page-:num/"
 
-pagination:
-  enabled: true
-  sort_reverse: true
-  per_page: 5
-  collection: 'posts'
-  permalink: '/blog/page-:num/'
+# pagination:
+#   enabled: true
+#   sort_reverse: true
+#   per_page: 5
+#   collection: 'posts'
+#   permalink: '/blog/page-:num/'
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate-v2
+  - jekyll-paginate
