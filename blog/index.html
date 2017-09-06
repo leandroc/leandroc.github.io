@@ -1,0 +1,9 @@
+---
+layout: index
+pagination:
+  enabled: true
+---
+
+{% include PostList.html posts=paginator.posts page=paginator.page per_page=paginator.per_page total_posts=paginator.total_posts %}
+
+{% include Pagination.html pagination=paginator %}

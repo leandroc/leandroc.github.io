@@ -1,0 +1,29 @@
+{% assign posts = include.posts %}
+{% assign page = include.page %}
+{% assign per_page = include.per_page %}
+{% assign total_posts = include.total_posts %}
+{% assign start = total_posts %}
+
+{% for i in (1..page) reversed %}
+  {% assign check = i | minus: 1 %}
+
+  {% if check > 0 %}
+    {% assign start = start | minus: per_page %}
+  {% endif %}
+{% endfor %}
+
+<ol class="post__list" reversed start="{{ start }}">
+  {% for post in posts %}
+  <li class="post__item">
+    <article class="post">
+      <header class="post__header">
+        <h2 class="post__title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+      </header>
+
+      <div class="post__content">{{ post.excerpt }}</div>
+    </article>
+  </li>
+  {% endfor %}
+</ol>

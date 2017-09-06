@@ -1,0 +1,11 @@
+{% assign list = include.list %}
+{% assign class = include.class %}
+
+<ul class="{{class}}__list">
+  {% for item in list %}
+  <li class="{{class}}__item">
+    <a class="{{class}}__link" href="{{ item.url }}">{{ item.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+

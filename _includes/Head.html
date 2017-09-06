@@ -1,0 +1,9 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.data.author.bio | truncate: 160 }}{% endif %}">
+
+  <title>{{ site.data.author.name }} - {{ site.data.author.job }}</title>
+
+  <link rel="stylesheet" href="/assets/style.css">
+</head>

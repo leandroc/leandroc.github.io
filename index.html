@@ -1,0 +1,13 @@
+---
+layout: index
+pagination:
+  enabled: true
+---
+
+{% if paginator.page < 2 %}
+  {% include Card.html %}
+{% endif %}
+
+{% include PostList.html posts=paginator.posts page=paginator.page per_page=paginator.per_page total_posts=paginator.total_posts %}
+
+{% include Pagination.html pagination=paginator %}

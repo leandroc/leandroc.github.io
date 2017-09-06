@@ -1,0 +1,4 @@
+{% assign date = include.date %}
+{% assign class = include.class %}
+
+<time class="{{ class }}">{{ date | date: "%d/%m/%Y" }}</time>

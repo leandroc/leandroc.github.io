@@ -1,0 +1,22 @@
+{
+    "name": "Leandro Araújo",
+    "job": "Desenvolvedor Front-end",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis debitis expedita eveniet nemo totam, at ipsa aspernatur ut consectetur ea beatae? Sapiente sit beatae officia, maxime ea excepturi esse est eveniet odio saepe, hic error vel placeat. Doloribus omnis illo eos molestiae voluptate, numquam tempore inventore iure quam eaque nemo itaque tenetur cumque facilis pariatur, facere at. Vero, voluptate. Eligendi, corrupti quos!",
+    "social": [
+      {
+        "title": "Github",
+        "url": "https://github.com/leandroc",
+        "slug": "github"
+      },
+      {
+        "title": "Codepen",
+        "url": "https://codepen.io/leandroc",
+        "slug": "codepen"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "",
+        "slug": "linkedin"
+      }
+    ]
+}

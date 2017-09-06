@@ -1,0 +1,19 @@
+{% assign pagination = include.pagination %}
+
+{% if pagination.total_posts > pagination.per_page %}
+<nav class="pagination">
+  {% if pagination.previous_page %}
+    <a class="pagination__link pagination__link--prev" href="{{ pagination.previous_page_path }}">Recentes</a>
+  {% else %}
+    <span class="pagination__disabled pagination__disabled--prev">Recentes</span>
+  {% endif %}
+
+  <span class="pagination__page-number">{{ pagination.page }}/{{ pagination.total_pages }}</span>
+
+  {% if pagination.next_page %}
+    <a class="pagination__link pagination__link--next" href="{{ pagination.next_page_path }}">Antigos</a>
+  {% else %}
+    <span class="pagination__disabled pagination__disabled--next">Antigos</span>
+  {% endif %}
+</nav>
+{% endif %}

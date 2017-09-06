@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Inicio",
+    "url": "/",
+    "slug": ""
+  },
+  {
+    "title": "Blog",
+    "url": "/blog/",
+    "slug": "blog"
+  },
+  {
+    "title": "Currículo",
+    "url": "/curriculo/",
+    "slug": "curriculo"
+  }
+]

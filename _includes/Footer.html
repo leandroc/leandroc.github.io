@@ -1,0 +1,10 @@
+<footer class="footer">
+  <div class="footer__link">
+    {{ site.data.author.name }}
+    &copy; {{ site.time | date: '%Y' }}
+  </div>
+
+  <nav class="footer__nav">
+    {% include List.html list=site.data.author.social class="footer__nav" %}
+  </nav>
+</footer>

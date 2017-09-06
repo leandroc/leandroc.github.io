@@ -1,0 +1,8 @@
+{% assign categories = include.categories %}
+{% assign class = include.class %}
+
+<div class="{{ class }}">
+  {% for cat in categories %}
+    <span class="{{ class }}__item">a-{{ cat }}</span>
+  {% endfor %}
+</div>

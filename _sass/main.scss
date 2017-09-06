@@ -1,0 +1,186 @@
+*, *:before, *:after { box-sizing: inherit }
+
+html {
+  @include fluid-type(320px, 1200px, 16px, 24px);
+}
+
+body { background-color: $color; }
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+
+  display: grid;
+  justify-content: stretch;
+  align-content: stretch;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+
+.header {
+  grid-area: header;
+  align-self: start;
+
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+}
+
+
+.logo {
+  &__link {
+    border: 1px solid;
+    display: block;
+    padding: 1rem;
+  }
+}
+
+
+.nav {
+  margin-left: auto; // align nav to right
+
+  &__list {
+    border: 1px solid;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    display: flex;
+  }
+
+  &__item { border: 1px solid; }
+
+  &__link {
+    border: 1px solid;
+    display: block;
+    padding: 1rem;
+  }
+}
+
+
+.content {
+  grid-area: content;
+  align-self: start;
+
+  border: 1px solid;
+
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+
+.card {
+  border: 1px solid;
+
+  &__header {
+    border: 1px solid;
+  }
+
+  &__title {
+    border: 1px solid;
+  }
+
+  &__content {
+    border: 1px solid;
+  }
+}
+
+
+.post {
+  border: 1px solid;
+
+  &__list {
+    border: 1px solid;
+  }
+
+  &__item {
+    border: 1px solid;
+  }
+
+  &__header {
+    border: 1px solid;
+  }
+
+  &__title {
+    border: 1px solid;
+  }
+
+  &__date {
+    border: 1px solid;
+  }
+
+  &__categories {
+    border: 1px solid;
+  }
+
+  &__categories__item {
+    border: 1px solid;
+  }
+
+  &__content {
+    border: 1px solid;
+  }
+}
+
+
+.pagination {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    border: 1px solid;
+
+    &--prev {}
+    &--next {}
+  }
+
+  &__disabled {
+    border: 1px solid;
+
+    &--prev {}
+    &--next {}
+  }
+
+  &__page-number {
+    border: 1px solid;
+  }
+}
+
+
+.footer {
+  grid-area: footer;
+  align-self: end;
+  text-align: center;
+
+  border: 1px solid;
+  padding: 1rem;
+
+  &__link {}
+
+  &__nav {}
+
+  &__nav__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__nav__item {
+    display: inline-block;
+  }
+
+  &__nav__link {
+    border: 1px solid;
+    display: block;
+  }
+}
