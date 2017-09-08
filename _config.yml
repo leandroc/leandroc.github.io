@@ -1,4 +1,5 @@
-baseurl: https://leandroc.github.io
+#baseurl: https://leandroc.github.io
+baseurl: /
 
 timezone:	America/Sao_Paulo
 
