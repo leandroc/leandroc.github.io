@@ -1,8 +1,11 @@
-baseurl: https://leandroc.github.io
-
 timezone:	America/Sao_Paulo
 
 highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 sass:
   style: compressed
