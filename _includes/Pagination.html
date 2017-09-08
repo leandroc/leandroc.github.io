@@ -8,7 +8,7 @@
     <span class="pagination__disabled pagination__disabled--prev">Recentes</span>
   {% endif %}
 
-  <span class="pagination__page-number">{{ pagination.page }}/{{ pagination.total_pages }}</span>
+  <span class="pagination__page-number">{{ pagination.page }} de {{ pagination.total_pages }}</span>
 
   {% if pagination.next_page %}
     <a class="pagination__link pagination__link--next" href="{{ pagination.next_page_path }}">Antigos</a>
